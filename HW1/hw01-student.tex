@@ -14,6 +14,8 @@
 \section*{Sundry}
 Before you start writing your final homework submission, state briefly how you worked on it.  Who else did you work with?  List names and email addresses.  (In case of homework party, you can just describe the group.)
 
+{\color{blue}{I did not work with anyobdy to complete this homework. To calculate large factorials (such as $100!$), I used WolframAlpha to get an approximate value for its decimal expansion, but aside from that I did not use any other online source to complete this homework.}}
+
 \vspace{15pt}
 
 \Question{Solving a System of Equations}
@@ -113,13 +115,24 @@ $\exists x \exists y Q(x,y) \implies \exists y \exists x Q(x,y)$.
 \item
 $\forall x \exists y Q(x,y) \implies \exists y\forall x Q(x,y)$.
     
+\begin{solution}
+    This is not true. The statement on the left indicates that regardless of any $x$ we choose we can choose a corresponding $y$. On the other hand, the statement on the right hand side indicates that there is a $y$ such that $Q(x, y)$ is true regardless of what value of $x$ we choose. These two statements are not equivalent, since choosing $x$ and a corresponding $y$ such that $Q(x, y)$ is true does not guarantee that there exists such a $y$ that makes $Q(x, y)$ true for all $x$.
+\end{solution}
 
 \item
 $\exists x \forall y Q(x,y) \implies \forall y \exists x Q(x,y)$.
+
+\begin{solution}
+    This is not true. This statement is not true for the same reason why part (b) is not true. 
+\end{solution}
     
 
 \item
 $\exists x \exists y Q(x,y) \implies \forall y \exists x Q(x,y)$.
+
+\begin{solution}
+    This is not true. The statement on the left hand side indicates the existence of $x$ and $y$ such that $Q(x, y)$ is true, but it makes no statement on the fact that there is a corresponding $x$ regardless of what $y$ we choose. 
+\end{solution}
     
 
 \end{Parts}
@@ -172,7 +185,7 @@ For each of the following, either prove the statement, or disprove by finding a 
 \end{solution} 
 	\Part $(\forall n \in \mathbb{Z}^+)$ $5n^3 > n!$. (Note: $\mathbb{Z}^+$ is the set of positive integers)
     \begin{solution}
-    This is clearly false, $5(100)^3 = 5 \times 10^6$ is much smaller than $100! \sim 10^{157}$.
+    This is clearly false, $5(100)^3 = 5 \times 10^6$ is much smaller than $100! \sim 10^{157}$. (this factorial was computed using WolframAlpha)
     \end{solution}
 \end{Parts}
 
