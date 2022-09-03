@@ -218,18 +218,22 @@ For a function $f$, define the image of a set $X$ to be the set $f(X) = \{y~|~y 
     \begin{solution}
         Let $x \in f(A \cap B)$. Then we know that $f^{-1}(x) \in A \cap B$, so $f^{-1}(x) \in A$ and $f^{-1}(x) \in B$, and thus $x \in f(A)$ and $x \in f(B) \implies x \in f(A)\cap f(B)$. 
 
-        Howeer, the reverse case is not true. 
-
         An example of a situation where this does not hold is if $A$ and $B$ are disjoint sets, but their intersection after imaging is not disjoint. For instance, let $A = \{1, 2, 3\}$, and let $B = \{-1, -2, -3\}$ and $f(x) = x^2$. It's clear that $A$ and $B$ are disjoint, so $f(A \cap B) = \varnothing$, but $f(A) \cap f(B) = \{1, 4, 9\} \neq \varnothing$, so equality does not hold.
     \end{solution}
     \Part $f(A \setminus B) \supseteq f(A) \setminus f(B)$, and give an example where equality does not hold.
 
     \begin{solution}
-        Let $x \in f(A \setminus B)$. Then, it holds that $x \in f(A - (A \cap B))$. Then this means that $x \in f(A)$ but $x \notin f(B)$ (since we have subtracted the intersection). 
+        Let $x \in f(A) \setminus f(B)$. We can rewrite this as $x \in f(A) - (f(A) \cap f(B))$, meaning that $x \in f(A)$ but $x \notin f(B)$. Thus, it follows that $f^{-1}(x) \in A$ and $f^{-1}(x) \notin B$, and thus $f^{-1}(x) \in A \setminus B$, so $x \in f(A \setminus B)$. 
 
-        The expression on the right hand side can be rewritten as $f(A) - (f(A) \cap f(B))$. This is the 
+
+        The same example given in part (c) works here as well. Suppose that $A = \{ 1, 2, 3\}$ and $B = \{-1, -2, -3\}$ and $f(x) = x^2$. Then $f(A \setminus B) = f(A) = f(B) = \{1, 4, 9\}$, but $f(A) \setminus f(B) = \{1, 4, 9\} \setminus \{1, 4, 9\} = \varnothing$.
+
+
+        % Let $x \in f(A \setminus B)$. Then, it holds that $x \in f(A - (A \cap B))$. Then this means that $x \in f(A)$ but $x \notin f(B)$ (since we have subtracted the intersection). 
+
+        % The expression on the right hand side can be rewritten as $f(A) - (f(A) \cap f(B))$. This is the 
         
-        Then this means that $f^{-1}(x) \in A$ but $f^{-1}(x) \notin B$. 
+        % Then this means that $f^{-1}(x) \in A$ but $f^{-1}(x) \notin B$. 
     \end{solution}
 \end{Parts}
 

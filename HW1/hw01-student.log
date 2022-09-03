@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.24)  2 SEP 2022 20:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.24)  2 SEP 2022 21:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -915,7 +915,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
  [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 301.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 305.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [7] (/Users/eric/Documents/Berkeley/CS-70/HW1/hw01-student.aux)
@@ -925,13 +925,13 @@ Package rerunfilecheck Info: File `hw01-student.out' has not changed.
 Here is how much of TeX's memory you used:
  49800 strings out of 478994
  1173003 string characters out of 5858184
- 1716353 words of memory out of 5000000
+ 1717353 words of memory out of 5000000
  66605 multiletter control sequences out of 15000+600000
  439605 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 143i,13n,144p,1669b,493s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 143i,13n,144p,1669b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmdunh10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/eric/Documents/Berkeley/CS-70/HW1/hw01-student.pdf (7 pages, 121540 bytes).
+Output written on /Users/eric/Documents/Berkeley/CS-70/HW1/hw01-student.pdf (7 pages, 121748 bytes).
 PDF statistics:
  161 PDF objects out of 1000 (max. 8388607)
  139 compressed objects within 2 object streams
