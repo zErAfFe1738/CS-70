@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1662180063 "/Users/eric/Documents/Berkeley/CS-70/HW1/hw01-student.tex" "/Users/eric/Documents/Berkeley/CS-70/HW1/hw01-student.pdf" "hw01-student" 1662180064
-  "/Users/eric/Documents/Berkeley/CS-70/HW1/hw01-student.aux" 1662180064 2099 cc31b630a6e8252fbe977f21953f914b ""
-  "/Users/eric/Documents/Berkeley/CS-70/HW1/hw01-student.tex" 1662180063 15103 9de74ef8357bd957dba867f5ae5e1c1d ""
+["pdflatex"] 1662230726 "/Users/eric/Documents/Berkeley/CS-70/HW1/hw01-student.tex" "/Users/eric/Documents/Berkeley/CS-70/HW1/hw01-student.pdf" "hw01-student" 1662230727
+  "/Users/eric/Documents/Berkeley/CS-70/HW1/hw01-student.aux" 1662230727 2099 cc31b630a6e8252fbe977f21953f914b ""
+  "/Users/eric/Documents/Berkeley/CS-70/HW1/hw01-student.tex" 1662230725 15574 00a036c6802e7f764c9a162749bee442 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -260,13 +260,13 @@
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1627101606 2724740 f36a3f5cfec5c6df7b7d2dd3a8cb54e4 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
   "header.sty" 1661321594 10059 b0c2b87a9e95e9d6e9fb95f454a3cc7c ""
-  "hw01-student.aux" 1662180064 2099 cc31b630a6e8252fbe977f21953f914b "pdflatex"
-  "hw01-student.out" 1662180064 1148 0184a3f679ca30bd5edda7073ade241a "pdflatex"
-  "hw01-student.tex" 1662180063 15103 9de74ef8357bd957dba867f5ae5e1c1d ""
+  "hw01-student.aux" 1662230727 2099 cc31b630a6e8252fbe977f21953f914b "pdflatex"
+  "hw01-student.out" 1662230727 1148 0184a3f679ca30bd5edda7073ade241a "pdflatex"
+  "hw01-student.tex" 1662230725 15574 00a036c6802e7f764c9a162749bee442 ""
   (generated)
-  "hw01-student.out"
   "hw01-student.pdf"
-  "/Users/eric/Documents/Berkeley/CS-70/HW1/hw01-student.pdf"
   "hw01-student.log"
+  "hw01-student.out"
   "/Users/eric/Documents/Berkeley/CS-70/HW1/hw01-student.log"
+  "/Users/eric/Documents/Berkeley/CS-70/HW1/hw01-student.pdf"
   "hw01-student.aux"
