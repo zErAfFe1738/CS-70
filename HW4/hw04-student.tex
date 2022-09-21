@@ -22,14 +22,50 @@ Solve the following modular arithmetic equations for $x$ and $y$.
 \begin{Parts}
 \Part $9x+5 \equiv 7 \pmod{11}$.
 
+\begin{solution} 
+  We can rearrange this to be $9x \equiv -2 \pmod{11}$, which can then be written as $9x \equiv -9 \pmod{11}$ so this implies that $x = -1$. And further, since we can add multiples of 11 withotu issue (since any multiple of 11 is divisible by 11), then we have the general solution for $x$: $\forall n \in \mathbb Z, \  x = -1 + 11n$
+\end{solution}
+
 \Part Show that $3x+15 \equiv 4 \pmod{21}$ does not have a solution.
+
+\begin{solution}
+  This is equivalent to writing $3x \equiv -11 \pmod{21}$ or $3x \equiv 10 \pmod{21}$. To show that this has no solution, we analyze the possible residues of multiples of 3 modulo 21. Any multiple of 3 can only be $3, 6, 9, 12, 15, 18$ modulo 21 (since they're multiples of 3). Since 10 is not on this list, this equation has no solution.
+\end{solution}
 
 \Part The system of simultaneous equations
 $3x+2y \equiv 0 \pmod{7}$ and $2x+y \equiv 4 \pmod{7}$.
 
+\begin{solution}
+  We can solve this system of equations in the same way we solve any system of equations: multiply the latter equation by 2 to get $4x + 2y \equiv 8 \equiv 1 \pmod 7$
+
+  \[ 3x + 2y - (4x + 2y) \equiv -1 \pmod{7}\] 
+
+  From here we get that $-x \equiv 1 \pmod 7 \implies x = 1 + 7n$ for all $n \in \mathbb Z$. Now we can solve for $y$, by letting $x =1$ for simplicity: 
+
+  \begin{align*}
+    3 + 2y &\equiv 0 \pmod{12}\\
+    2y &\equiv 5 \pmod 7\\
+    \therefore y &\equiv 2 \pmod {7}
+  \end{align*}
+
+  This implies the solutions $y = 2 + 7n$ for all $n \in \mathbb Z$. Thus, our solutions for $x$ and $y$ are in the form $x = 1 + 7n$ and $y = 2 + 7k$ for all $k, n \in \mathbb Z$.
+\end{solution}
+
 \Part $13^{2019} \equiv x \pmod{12}$.
 
+
+\begin{solution}
+  Notice that $13 \equiv 1 \pmod {12}$ and so our equation becomes $1^{2019} \pmod {12}$ so therefore the result is 1.
+\end{solution}
 \Part $7^{21} \equiv x \pmod{11}$.
+
+\begin{solution}
+  We can rewrite $7^{21} = \left(7^{3}\right)^7$ and since $7^3 \equiv 2 \pmod 11$, which is easily computable. This means that 
+
+  \[ 128 \equiv 2 \pmod {11}\]
+
+  And since 121 is a power of 11, then the remainder would be $7$, which is our answer.
+\end{solution}
 
 \end{Parts}
 \pagebreak
@@ -39,11 +75,52 @@ $3x+2y \equiv 0 \pmod{7}$ and $2x+y \equiv 4 \pmod{7}$.
 
 \Part What are all the possible perfect cubes modulo 7?
 
+\begin{solution}
+  Every perfect cube can be decomposed into $0, 1^3, 2^3, \dots, 6^3$ when taken modulo 7. Thus, we can construct a chart: 
+
+  \begin{center}
+    \begin{tabular}{l|l}
+      $x$ & $x^3 \pmod{7}$ \\ \hline
+      0   & 0              \\
+      1   & 1              \\
+      2   & 1              \\
+      3   & -1             \\
+      4   & 1              \\
+      5   & -1             \\
+      6   & -1            
+      \end{tabular}
+  \end{center}
+
+
+\end{solution}
 \Part Show that any solution to $a^3 + 2b^3 \equiv 0 \pmod{7}$ must satisfy $a \equiv b \equiv 0 \pmod{7}$.
+
+
+\begin{solution}
+  We use the previous part, as well as the additive property of modular arithmetic, except in reverse: if $a^3 \equiv c \pmod 7$ then $2b^3 \equiv -c \pmod 7$, so that the net sum on the right hand side remains zero. Now let's look at the latter equation. Since we've shown that all nonzero numbers are $\pm 1$ modulo 7, this implies that
+
+  \[ 2b^3 \equiv \pm -1 \pmod 7\] 
+
+  But since $b^3 \equiv \pm 1 \pmod 7$, this means that $2b^3 \equiv \pm 2 \pmod 7$, implying that there is no solution to $2b^3 \pm -1 \pmod 7$ for nonzero $c$. Thus, the only solution arises when $c = 0$, which would imply that $a^3 \equiv 0 \pmod 7$ and $2b^3 \equiv 0 \pmod 7$, with each equation implying that $a \equiv 0 \pmod 7$ and $b \equiv 0 \pmod 7$, respectively.
+\end{solution}
 
 \Part Using part (b), prove that $a^3 + 2b^3 = 7a^2b$ has no non-trivial solutions $(a, b)$ in the integers. In other words, there are no integers $a$ and $b$, that satisfy this equation, except the trivial solution $a=b=0$.
 
 [\emph{Hint:} Consider some nontrivial solution $(a, b)$ with the smallest value for $\abs{a}$ (why are we allowed to consider this?). Then arrive at a contradiction by finding another solution $(a', b')$ with $\abs{a'} < \abs{a}$.]
+
+\begin{solution}
+  We use the hint. Suppose there is a smallest nontrivial solution $(a, b)$ with the smallest value of $\abs{a}$ that satisfies this equation. We know from the previous part that $a \equiv b \equiv 0 \pmod 7$, so thus we can write $a = 7k$ and $b = 7m$ for some $k, m \in \mathbb Z$. So we can rewrite the above equation: 
+
+  \begin{align*}
+    (7k)^3 + 2(7m)^3 &= 7(7k^2)(7m)\\
+    7^3 k^3 + 2 \cdot 7^3m^3 &= 7^4k^2m\\
+    \therefore k^3 + 2m^3 &= 7k^2m
+  \end{align*}
+
+  But this last equation seemingly suggests that $(k, m)$ is also a valid solution. And since $a = 7k \implies |k| = |a/7| < |a|$ then this means that this solution pair is smaller than our original $(a, b)$. This is a contradiction, since we assumed earlier that $(a, b)$ was the nontrivial pair with the smallest $|a|$. As a result, this solution has no nontrivial solutions $(a, b)$. 
+
+  It's also easy to show that the trivial solution $(a, b) = (0, 0)$ is valid since both the left and right hand sides equal zero.
+\end{solution}
 
 \end{Parts}
 \pagebreak 
@@ -116,7 +193,19 @@ such that none of them are prime powers.
 
 
 \begin{solution}
+  Apologies in advance because my solution is not the intended one. 
+  
+  We prove that $k! + 1, k! + 2, \dots, k! + k$ can be chosen as the consecutive positive integers for $k \ge 4$, and we show that consecutive integers also exist for $k < 4$ by example. Let's do the example first, to get it out of the way. If $k = 1$, $15$ is a solution. If $k = 2$, the numbers $15, 16$ are a valid pair. If $k = 3$, then $14, 15, 16$ is a valid triplet. Now we prove this is true for $k \ge 4$. 
 
+  Let's look at the string of $k$ integers again. Notice that for any $a \le k$, we can rewrite the term $k! + a$ in the following way:
+
+  \[ k! + a = a\left(\frac{k!}{a} + 1\right)\]
+
+  $k!/a$ is guaranteed to be divisible by $a$, since $a \le k$, so $k!$ contains $a$ as a factor. Now we need to prove that $k! + a$ is not a prime power for any $a < k$. Notice that in order for $k! + a$ to be a prime power, then it follows that $k!/a + 1$ must also be a prime power, since a prime power can only be expressed as a product of two smaller prime powers.\footnote{{\color{blue}{We can prove this is true by noticing that for any $b$ given prime $a$: \[ a^n b = a^m \implies b = \frac{a^m}{a^n} = a^{m-n}\] which is clearly a prime power.}}} Now notice that 
+  
+  \[ \frac{k!}{a} + 1 \equiv 1 \pmod {a}\]
+
+  So this term can never be a prime power. And since this works for any $a < k$, none of the integers in $k! + 1, \dots, k! +k$ can be prime powers, so we are done. $\blacksquare$
 \end{solution}
 
 \end{document}
