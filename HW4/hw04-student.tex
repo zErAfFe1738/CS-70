@@ -138,6 +138,25 @@ Hint for the only if direction: If $p$ is composite, then it has some prime fact
 \Question{Fermat's Little Theorem}
 
 Without using induction, prove that $\forall n \in \mathbb{N}$, $n^7-n$ is divisible by 42.
+
+\begin{solution}
+  First, we factor $n^7 - n = n(n^6 - 1)$. Since $42 = 2 \cdot 3 \cdot 7$, this means that if we can show that $n^7 - n$ can be both divisible by 2, 3 and 7 then we are also done. We can also show these independently since 2, 3 and 7 are all prime numbers, so they share no factors besides 1. 
+
+  First, let's show that $n^7 - n \equiv 0 \pmod{2}$. This is easy: if $n$ is even, then $n^7 - n$ is clearly even since the difference of two even numbers is even. Further, if $n$ is odd, then $n^7 - n$ is still even since the difference of two odd numbers is also even.
+
+  Now let's show that $n^7 - n \equiv 0 \pmod{3}$. Since all residues modulo 3 are either $0, \pm 1$, this means the following: 
+
+  \begin{itemize}
+    \item If $n \equiv 0 \pmod{3}$ then clearly $n^7 - n$ is divisible. 
+    \item If $n \equiv 1 \pmod{3}$ then $n^7 - n \equiv 1^7 - 1 \equiv 0 \pmod{3}$, so this is divisible by 3 as well.
+    \item If $n \equiv -1 \pmod{3}$ then $n^7 - n \equiv (-1)^7 + 1 \equiv 0 \pmod{3}$, so this is also divisible by 3.
+  \end{itemize}
+
+  Finally, let's analyze the factorization. If $n \equiv 0 \pmod {42}$ then we are done. Now we look at the case where $n \not\equiv 0 \pmod{42}$. From Fermat's little theorem, we know that $n^6 \equiv 1 \pmod {7}$ for all $n \in \{1, 2, \dots, 6\}$. However, we can extend this further to any $n$, since the base of the exponential can always be rewritten as a power of $\{1, 2, \dots, 6\}$ modulo 7. Thus, $n^6 -1 \equiv 0 \pmod{7}$ for any $n$, and so this is always divisible by 7.  
+
+  Since this number is always divisible by 2, 3, and 7, then $n^7 - n$ is always divisible by 42 $\forall n \in \mathbb N$.
+  % Now we factor $n^6 - 1 = (n^3+1)(n^3-1)$. One of these is a multiple of 7, so let's go through them both. Suppose $n^3 +1 \equiv 0 \pmod{7}$, 
+\end{solution}
 \pagebreak
 \Question{Euler's Totient Function} 
 
@@ -148,9 +167,31 @@ Without using induction, prove that $\forall n \in \mathbb{N}$, $n^7-n$ is divis
   \begin{Parts}
     \Part Let $p$ be a prime number. What is $\phi(p)$?
 
+    \begin{solution}
+      $\phi(p) = p-1$, since by definition, no number less than $p$ divides $p$.
+    \end{solution}
+
     \Part Let $p$ be a prime number and $k$ be some positive integer. What is $\phi(p^k)$?
 
+    \begin{solution}
+      The numbers that will not be coprime to $p^k$ will be $p, p^2, \dots, p^{k}$. There are $k$ numbers here, so $\phi(p^k) = p^k-k$.
+    \end{solution}
+
     \Part Show that if $\gcd(m, n) = 1$, then $\phi(mn) = \phi(m)\phi(n)$. (Hint: Use the Chinese Remainder Theorem.)
+
+    \begin{solution}
+      From the chinese remainder theorem, we know that if 
+
+      \begin{align*}
+        x &\equiv a \pmod{m}\\
+        x &\equiv b \pmod{n} 
+      \end{align*}
+
+      Guarantees a unique $x \pmod{mn}$. Now notice that from Euclid's algorithm $\gcd(m, n) = \gcd(n, m \pmod n) = 1$ since $m$ and $n$ are given to be coprime. Thus, $m \pmod n$ and $n$ must also be coprime. 
+
+
+      And from the notes, we know that if $\gcd(a, m) = 1$ and $\gcd(b, m) = 1$ then $x$ is also coprime to $mn$.
+    \end{solution}
 
     \Part Argue that if the prime factorization of $n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_k^{\alpha_k}$, then
     \[ \phi(n) = n \prod_{i = 1}^k \frac{p_i - 1}{p_i}. \]
@@ -199,11 +240,11 @@ such that none of them are prime powers.
 
   Let's look at the string of $k$ integers again. Notice that for any $a \le k$, we can rewrite the term $k! + a$ in the following way:
 
-  \[ k! + a = a\left(\frac{k!}{a} + 1\right)\]
+  \[k! + a = a\left(\frac{k!}{a} + 1\right)\]
 
   $k!/a$ is guaranteed to be divisible by $a$, since $a \le k$, so $k!$ contains $a$ as a factor. Now we need to prove that $k! + a$ is not a prime power for any $a < k$. Notice that in order for $k! + a$ to be a prime power, then it follows that $k!/a + 1$ must also be a prime power, since a prime power can only be expressed as a product of two smaller prime powers.\footnote{{\color{blue}{We can prove this is true by noticing that for any $b$ given prime $a$: \[ a^n b = a^m \implies b = \frac{a^m}{a^n} = a^{m-n}\] which is clearly a prime power.}}} Now notice that 
   
-  \[ \frac{k!}{a} + 1 \equiv 1 \pmod {a}\]
+  \[\frac{k!}{a} + 1 \equiv 1 \pmod {a}\]
 
   So this term can never be a prime power. And since this works for any $a < k$, none of the integers in $k! + 1, \dots, k! +k$ can be prime powers, so we are done. $\blacksquare$
 \end{solution}
