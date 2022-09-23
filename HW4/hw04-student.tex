@@ -174,7 +174,7 @@ Without using induction, prove that $\forall n \in \mathbb{N}$, $n^7-n$ is divis
     \Part Let $p$ be a prime number and $k$ be some positive integer. What is $\phi(p^k)$?
 
     \begin{solution}
-        The numbers that will not be coprime to $p^k$ will be $p, p^2, \dots, p^{k}$. There are $k$ numbers here, so $\phi(p^k) = p^k-k$.
+      The numbers which are not coprime to $p^k$ will be the multiples of $p$. Since we can write $p^k = p^{k-1} \cdot p$, this means that there are $p^{k-1}$ multiples of $p$ which are less than $p^k$. Thus, $\phi(p^k) = p^k - p^{k-1}$.
       \end{solution}
 
     \Part Show that if $\gcd(m, n) = 1$, then $\phi(mn) = \phi(m)\phi(n)$. (Hint: Use the Chinese Remainder Theorem.)
@@ -203,6 +203,15 @@ Without using induction, prove that $\forall n \in \mathbb{N}$, $n^7-n$ is divis
     \Part Argue that if the prime factorization of $n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_k^{\alpha_k}$, then
     \[ \phi(n) = n \prod_{i = 1}^k \frac{p_i - 1}{p_i} \]
 
+    Firstly, notice that since each prime is coprime to the all other primes, we can write 
+    \begin{solution}
+    \begin{align*}
+      \phi(n) &= \phi(p_1^{\alpha_1} \cdots p_k^{\alpha_k}) = \phi(p_1^{\alpha_1})\phi(p_2^{\alpha_2}) \cdots \phi(p_k^{\alpha_k})\\
+      &= (p_1^{\alpha_1} - p_1^{\alpha_1 - 1}) \cdots (p_k^{\alpha_k} - p_k^{\alpha_k - 1})
+    \end{align*}
+  \end{solution}
+
+
   \end{Parts}
 
 
@@ -225,6 +234,8 @@ integers less than or equal to $n$ which are coprime to $n$ (including 1).
   is a bijection, where $f(x) \coloneqq ax \pmod{n}$.
 
   \Part Prove Euler's Theorem. (Hint: Recall the FLT proof.)
+
+
 \end{Parts}
 
 \pagebreak
