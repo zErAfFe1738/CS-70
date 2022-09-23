@@ -60,7 +60,7 @@ $3x+2y \equiv 0 \pmod{7}$ and $2x+y \equiv 4 \pmod{7}$.
 \Part $7^{21} \equiv x \pmod{11}$.
 
 \begin{solution}
-  We can rewrite $7^{21} = \left(7^{3}\right)^7$ and since $7^3 \equiv 2 \pmod 11$, which is easily computable. This means that 
+  We can rewrite $7^{21} = \left(7^{3}\right)^7$ and since $7^3 \equiv 2 \pmod{11}$, which is easily computable. This means that 
 
   \[ 128 \equiv 2 \pmod {11}\]
 
@@ -101,7 +101,7 @@ $3x+2y \equiv 0 \pmod{7}$ and $2x+y \equiv 4 \pmod{7}$.
 
   \[ 2b^3 \equiv \pm -1 \pmod 7\] 
 
-  But since $b^3 \equiv \pm 1 \pmod 7$, this means that $2b^3 \equiv \pm 2 \pmod 7$, implying that there is no solution to $2b^3 \pm -1 \pmod 7$ for nonzero $c$. Thus, the only solution arises when $c = 0$, which would imply that $a^3 \equiv 0 \pmod 7$ and $2b^3 \equiv 0 \pmod 7$, with each equation implying that $a \equiv 0 \pmod 7$ and $b \equiv 0 \pmod 7$, respectively.
+  But since $b^3 \equiv \pm 1 \pmod 7$, this means that $2b^3 \equiv \pm 2 \pmod 7$, implying that there is no nonzero solution to $2b^3 \pm -1 \pmod 7$ for nonzero $c$. Thus, the only solution arises when $c = 0$, which would imply that $a^3 \equiv 0 \pmod 7$ and $2b^3 \equiv 0 \pmod 7$, with each equation implying that $a \equiv 0 \pmod 7$ and $b \equiv 0 \pmod 7$, respectively.
 \end{solution}
 
 \Part Using part (b), prove that $a^3 + 2b^3 = 7a^2b$ has no non-trivial solutions $(a, b)$ in the integers. In other words, there are no integers $a$ and $b$, that satisfy this equation, except the trivial solution $a=b=0$.
@@ -174,8 +174,8 @@ Without using induction, prove that $\forall n \in \mathbb{N}$, $n^7-n$ is divis
     \Part Let $p$ be a prime number and $k$ be some positive integer. What is $\phi(p^k)$?
 
     \begin{solution}
-      The numbers that will not be coprime to $p^k$ will be $p, p^2, \dots, p^{k}$. There are $k$ numbers here, so $\phi(p^k) = p^k-k$.
-    \end{solution}
+        The numbers that will not be coprime to $p^k$ will be $p, p^2, \dots, p^{k}$. There are $k$ numbers here, so $\phi(p^k) = p^k-k$.
+      \end{solution}
 
     \Part Show that if $\gcd(m, n) = 1$, then $\phi(mn) = \phi(m)\phi(n)$. (Hint: Use the Chinese Remainder Theorem.)
 
@@ -187,14 +187,21 @@ Without using induction, prove that $\forall n \in \mathbb{N}$, $n^7-n$ is divis
         x &\equiv b \pmod{n} 
       \end{align*}
 
-      Guarantees a unique $x \pmod{mn}$. Now notice that from Euclid's algorithm $\gcd(m, n) = \gcd(n, m \pmod n) = 1$ since $m$ and $n$ are given to be coprime. Thus, $m \pmod n$ and $n$ must also be coprime. 
+      Guarantees a unique $c$ which satisfies $x \equiv c \pmod{mn}$. This means that for any $(a, b)$ we choose, there will be a unique value of $c$. Now consider the following: if $x$ is coprime to $m$, then it follows from the Euclidean algorithm that $\gcd(x, m) = \gcd(m, x \pmod m) = 1$ and since $x \equiv a \pmod m$, then this implies that $\gcd(m, a) = 1$. The same argument goes for $x$ and $n$: $\gcd(x, n) = \gcd(n, b) = 1$. In other words, this means that if $x$ is coprime to $m$, then $a$ is also coprime to $m$, and likewise for $b$ and $n$. 
 
+      Now, instead of looking for integers which are coprime to $m$ and $n$, we can now shift our focus to $a$ and $b$ since if $x$ is coprime to $m$ and $n$ this is the same as looking for numbers $a$ and $b$ which are individually coprime to $m$ and $n$ respectively. 
 
-      And from the notes, we know that if $\gcd(a, m) = 1$ and $\gcd(b, m) = 1$ then $x$ is also coprime to $mn$.
+      For $m$, there are $\phi(m)$ numbers coprime to $m$, meaning that there are $\phi(m)$ choices of $a$ we can make. Likewise, there are $\phi(n)$ choices of $b$ that we can make as well. Thus, there are $\phi(m)\phi(n)$ ways of choosing $(a, b)$ such that $x$ is coprime to $m$ and coprime to $n$. 
+      
+      Finally, notice that if $\gcd(x, m) = \gcd(x, n) = 1$, then it follows that $\gcd(x, mn) = 1$. Had this not been true, then it would mean that $x$ would have shared a factor with either $m$ or $n$ so either $\gcd(x, m) \neq 1$ or $\gcd(x, n) \neq 1$. Thus, becuase this fact is true, then this means that every unique $x$ we found by selecting $(a, b)$ not only corresponds to a unique $x$, but also an $x$ which is coprime to $mn$. Since the number of ways we can do this is $\phi(m)\phi(n)$, this means that $\phi(mn) = \phi(m)\phi(n)$.
+
+      We also need to prove that this list is complete. That is, there doesn't exist an integer $k \in \phi(mn)$ such that it does not appear in $\phi(m)$ or $\phi(n)$. If this is true, then this means that $\gcd(k, m)$ or $\gcd(k, n)$ is not equal to 1, and if this is true then $k$ cannot be coprime to $n$. 
+
+      % And from the notes, we know that if $\gcd(a, m) = 1$ and $\gcd(b, m) = 1$ then $x$ is also coprime to $mn$.
     \end{solution}
 
     \Part Argue that if the prime factorization of $n = p_1^{\alpha_1} p_2^{\alpha_2} \cdots p_k^{\alpha_k}$, then
-    \[ \phi(n) = n \prod_{i = 1}^k \frac{p_i - 1}{p_i}. \]
+    \[ \phi(n) = n \prod_{i = 1}^k \frac{p_i - 1}{p_i} \]
 
   \end{Parts}
 
