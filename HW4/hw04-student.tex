@@ -242,7 +242,7 @@ Without using induction, prove that $\forall n \in \mathbb{N}$, $n^7-n$ is divis
 
       For $m$, there are $\phi(m)$ numbers coprime to $m$, meaning that there are $\phi(m)$ choices of $a$ we can make. Likewise, there are $\phi(n)$ choices of $b$ that we can make as well. Thus, there are $\phi(m)\phi(n)$ ways of choosing $(a, b)$ such that $x$ is coprime to $m$ and coprime to $n$. 
       
-      Finally, notice that if $\gcd(x, m) = \gcd(x, n) = 1$, then it follows that $\gcd(x, mn) = 1$. Had this not been true, then it would mean that $x$ would have shared a factor with either $m$ or $n$ so either $\gcd(x, m) \neq 1$ or $\gcd(x, n) \neq 1$. Thus, becuase this fact is true, then this means that every unique $x$ we found by selecting $(a, b)$ not only corresponds to a unique $x$, but also an $x$ which is coprime to $mn$. Since the number of ways we can do this is $\phi(m)\phi(n)$, this means that $\phi(mn) = \phi(m)\phi(n)$.
+      Finally, notice that if $\gcd(x, m) = \gcd(x, n) = 1$, then it follows that $\gcd(x, mn) = 1$. Had this not been true, then it would mean that $x$ would have shared a factor with either $m$ or $n$ so either $\gcd(x, m) \neq 1$ or $\gcd(x, n) \neq 1$. Thus, becuase this fact is true, then this means that every unique $x$ we found by selecting $(a, b)$ not only corresponds to a unique $x$, but also an $x$ which is coprime to $mn$ and therefore in $\phi(mn)$. Since $a$ and $b$ can be chosen independently of each other, this means that for every value of $a$ we choose there are $\phi(n)$ ways of choosing $b$. Thus, there are $\phi(m)\phi(n)$ total ways of choosing $(a, b)$.
 
       We also need to prove that this list is complete. That is, there doesn't exist an integer $k \in \phi(mn)$ such that it does not appear in $\phi(m)$ or $\phi(n)$. If this is true, then this means that $\gcd(k, m)$ or $\gcd(k, n)$ is not equal to 1, and if this is true then $k$ cannot be coprime to $n$. 
 
@@ -269,7 +269,7 @@ Without using induction, prove that $\forall n \in \mathbb{N}$, $n^7-n$ is divis
       &= (p_1^{\alpha_1} - p_1^{\alpha_1 - 1}) \cdots (p_k^{\alpha_k} - p_k^{\alpha_k - 1})
     \end{align*}
 
-    And so we recover the previous formula for $\phi(n)$. $\blacksquare$
+    Since these expressions are the same we are done. $\blacksquare$
   \end{solution}
 
 
@@ -277,7 +277,8 @@ Without using induction, prove that $\forall n \in \mathbb{N}$, $n^7-n$ is divis
 
 
 \pagebreak
-\Question{Euler's Totient Theorem}Euler's Totient Theorem states that, if $n$ and $a$ are coprime,
+\Question{Euler's Totient Theorem} 
+Euler's Totient Theorem states that, if $n$ and $a$ are coprime,
 \[
   a^{\phi(n)} \equiv 1 \pmod{n}
 \]
@@ -348,7 +349,7 @@ such that none of them are prime powers.
     x_k &\equiv 0 \pmod{p_{2k - 1}p_{2k}}
   \end{align*}
 
-  So rearranging these congruences, we get: 
+  This set guarnatees that each of $x+1$ through $x+k$ is divisible by at least two primes. Rearranging these congruences, we get: 
 
   \begin{align*}
     x &\equiv -1 \pmod{p_1p_2}\\
