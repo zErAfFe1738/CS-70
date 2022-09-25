@@ -14,7 +14,7 @@
 \section*{Sundry}
 Before you start writing your final homework submission, state briefly how you worked on it.  Who else did you work with?  List names and email addresses.  (In case of homework party, you can just describe the group.)
 
-{\color{blue}{I did not work with anybody in particular on this homework. I went to office hours a couple times to receive guidance from TAs on the homework problems, but nothing else.}}
+{\color{blue}{I worked on problem 6a with \textbf{Sri Chandramouli (sri.c@berkeley.edu)} during an office hours session. I did not work with anybody else.}}
 
 \vspace{15pt}
 
@@ -25,13 +25,13 @@ Solve the following modular arithmetic equations for $x$ and $y$.
 \Part $9x+5 \equiv 7 \pmod{11}$.
 
 \begin{solution} 
-  We can rearrange this to be $9x \equiv -2 \pmod{11}$, which can then be written as $9x \equiv -9 \pmod{11}$ so this implies that $x = -1$. And further, since we can add multiples of 11 withotu issue (since any multiple of 11 is divisible by 11), then we have the general solution for $x$: $\forall n \in \mathbb Z, \  x = -1 + 11n$
+  We can rearrange this to be $9x \equiv -2 \pmod{11}$, which can then be written as $9x \equiv -9 \pmod{11}$ so this implies that $x = -1$. And further, since we can add multiples of 11 without issue (since any multiple of 11 is divisible by 11), then we have the general solution for $x$: $\forall n \in \mathbb Z, \  x = -1 + 11n$
 \end{solution}
 
 \Part Show that $3x+15 \equiv 4 \pmod{21}$ does not have a solution.
 
 \begin{solution}
-  This is equivalent to writing $3x \equiv -11 \pmod{21}$ or $3x \equiv 10 \pmod{21}$. To show that this has no solution, we analyze the possible residues of multiples of 3 modulo 21. Any multiple of 3 can only be $3, 6, 9, 12, 15, 18$ modulo 21 (since they're multiples of 3). Since 10 is not on this list, this equation has no solution.
+  This is equivalent to writing $3x \equiv -11 \pmod{21}$ or $3x \equiv 10 \pmod{21}$. To show that this has no solution, we analyze the possible residues of multiples of 3 modulo 21. Any multiple of 3 can only be $3, 6, 9, 12, 15, 18$ modulo 21 (since they're multiples of 3), so since 10 is not on this list, this equation has no solution. 
 \end{solution}
 
 \Part The system of simultaneous equations
@@ -57,7 +57,7 @@ $3x+2y \equiv 0 \pmod{7}$ and $2x+y \equiv 4 \pmod{7}$.
 
 
 \begin{solution}
-  Notice that $13 \equiv 1 \pmod {12}$ and so our equation becomes $1^{2019} \pmod {12}$ so therefore the result is 1.
+  Notice that $13 \equiv 1 \pmod {12}$ and so our equation becomes $x \equiv 1^{2019} \pmod {12}$ so therefore the result is 1.
 \end{solution}
 \Part $7^{21} \equiv x \pmod{11}$.
 
@@ -93,17 +93,19 @@ $3x+2y \equiv 0 \pmod{7}$ and $2x+y \equiv 4 \pmod{7}$.
       \end{tabular}
   \end{center}
 
+  Therefore all the perfect cubes are $\{-1, 0, 1\}$ modulo 7.
+
 
 \end{solution}
 \Part Show that any solution to $a^3 + 2b^3 \equiv 0 \pmod{7}$ must satisfy $a \equiv b \equiv 0 \pmod{7}$.
 
 
 \begin{solution}
-  We use the previous part, as well as the additive property of modular arithmetic, except in reverse: if $a^3 \equiv c \pmod 7$ then $2b^3 \equiv -c \pmod 7$, so that the net sum on the right hand side remains zero. Now let's look at the latter equation. Since we've shown that all nonzero numbers are $\pm 1$ modulo 7, this implies that
+  We use the previous part, as well as the additive property of modular arithmetic, except in reverse: if $a^3 \equiv c \pmod 7$ then $2b^3 \equiv -c \pmod 7$, so that the net sum on the right hand side remains zero. Since we've shown that $a^3 \equiv \pm 1$ modulo 7 when $a \not \equiv 0 \pmod 7$, this implies that
 
   \[ 2b^3 \equiv \pm -1 \pmod 7\] 
 
-  But since $b^3 \equiv \pm 1 \pmod 7$, this means that $2b^3 \equiv \pm 2 \pmod 7$, implying that there is no nonzero solution to $2b^3 \pm -1 \pmod 7$ for nonzero $c$. Thus, the only solution arises when $c = 0$, which would imply that $a^3 \equiv 0 \pmod 7$ and $2b^3 \equiv 0 \pmod 7$, with each equation implying that $a \equiv 0 \pmod 7$ and $b \equiv 0 \pmod 7$, respectively.
+  But since $b^3 \equiv \pm 1 \pmod 7$, this means that $2b^3 \equiv \pm 2 \pmod 7$, implying that there is no solution to $2b^3 \pm -1 \pmod 7$. Thus, the only solution arises when $c = 0$, which would imply that $a^3 \equiv 0 \pmod 7$ and $2b^3 \equiv 0 \pmod 7$, which gives us $a \equiv b \equiv 0 \pmod 7$.
 \end{solution}
 
 \Part Using part (b), prove that $a^3 + 2b^3 = 7a^2b$ has no non-trivial solutions $(a, b)$ in the integers. In other words, there are no integers $a$ and $b$, that satisfy this equation, except the trivial solution $a=b=0$.
@@ -119,9 +121,9 @@ $3x+2y \equiv 0 \pmod{7}$ and $2x+y \equiv 4 \pmod{7}$.
     \therefore k^3 + 2m^3 &= 7k^2m
   \end{align*}
 
-  But this last equation seemingly suggests that $(k, m)$ is also a valid solution. And since $a = 7k \implies |k| = |a/7| < |a|$ then this means that this solution pair is smaller than our original $(a, b)$. This is a contradiction, since we assumed earlier that $(a, b)$ was the nontrivial pair with the smallest $|a|$. As a result, this equation has no nontrivial solutions $(a, b)$. 
+  But this last equation suggests that $(k, m)$ is also a valid solution. And since $a = 7k \implies |k| = |a/7| < |a|$ then this means that this solution pair $(k, m)$ is smaller than our original $(a, b)$. This is a contradiction, since we assumed earlier that $(a, b)$ was the nontrivial pair with the smallest $|a|$. As a result, this equation has no nontrivial solutions $(a, b)$. 
 
-  It's also easy to show that the trivial solution $(a, b) = (0, 0)$ is valid since both the left and right hand sides equal zero.
+  It's also easy to show that the trivial solution $(a, b) = (0, 0)$ is valid since both the left and right hand sides equal zero. $\blacksquare$
 \end{solution}
 
 \end{Parts}
@@ -151,7 +153,7 @@ Hint for the only if direction: If $p$ is composite, then it has some prime fact
 
   % Now we take the only if case, and consider the hint. If $p$ is composite, this means that it has some prime factor $q$, and thus $(p - 1)! \equiv 0 \pmod q$.
   
-  Now we take the only if case, and consider the hint. If $p$ is composite, then this means it has some prime factor $q$, and thus $(p - 1)! \equiv 0 \pmod q$. Now consider the original statement:
+  For the only if direction, we consider the hint. If $p$ is composite, then this means it has some prime factor $q$, and thus $(p - 1)! \equiv 0 \pmod q$. Now consider the original statement:
 
   \[ (p - 1)! \equiv -1 \pmod p\]
 
@@ -159,7 +161,7 @@ Hint for the only if direction: If $p$ is composite, then it has some prime fact
 
   \[ (p - 1)! +1 \equiv 0 \pmod p\]
 
-  If $p$ is composite and $(p - 1)! \equiv 0 \pmod q$, then this implies that $(p - 1)! +1 \equiv 1  \pmod q$, which cannot be possible since $q$ is a factor of $p$, and thus anything divisible by $p$ should also be divislble by $q$. So we've reached a contradiction. Thus, if $p$ is composite then $(p - 1)! \not \equiv 0 \pmod p$.
+  If $p$ is composite and $(p - 1)! \equiv 0 \pmod q$, then this implies that $(p - 1)! +1 \equiv 1  \pmod q$. However, we know that $(p - 1)! + 1 \equiv 0 \pmod p$. This is a contradiction, since $q$ is a prime factor $p$ so any number divisible by $p$ must also be divisible by $q$, but $(p - 1)! +1 \equiv 1  \pmod q$ implies that this expression is \textit{not} divisible by $q$ while being divisible by $p$. Thus our original statement is incorrect for composite $p$, so $(p - 1)! \not \equiv 0 \pmod p$. $\blacksquare$
   
   
   % and thus $q$ will not have a multiplicative inverse modulo $p$. Further, no multiple of $q$ will have a multiplicative inverse modulo $p$. 
@@ -203,7 +205,7 @@ Without using induction, prove that $\forall n \in \mathbb{N}$, $n^7-n$ is divis
 
   Finally, let's analyze the factorization. If $n \equiv 0 \pmod {42}$ then we are done. Now we look at the case where $n \not\equiv 0 \pmod{42}$. From Fermat's little theorem, we know that $n^6 \equiv 1 \pmod {7}$ for all $n \in \{1, 2, \dots, 6\}$. However, we can extend this further to any $n$, since the base of the exponential can always be rewritten as a power of $\{1, 2, \dots, 6\}$ modulo 7. Thus, $n^6 -1 \equiv 0 \pmod{7}$ for any $n$, and so this is always divisible by 7.  
 
-  Since this number is always divisible by 2, 3, and 7, then $n^7 - n$ is always divisible by 42 $\forall n \in \mathbb N$.
+  Since this number is always divisible by 2, 3, and 7, then $n^7 - n$ is always divisible by 42 $\forall n \in \mathbb N$. $\blacksquare$
   % Now we factor $n^6 - 1 = (n^3+1)(n^3-1)$. One of these is a multiple of 7, so let's go through them both. Suppose $n^3 +1 \equiv 0 \pmod{7}$, 
 \end{solution}
 \pagebreak
@@ -244,7 +246,7 @@ Without using induction, prove that $\forall n \in \mathbb{N}$, $n^7-n$ is divis
       
       Finally, notice that if $\gcd(x, m) = \gcd(x, n) = 1$, then it follows that $\gcd(x, mn) = 1$. Had this not been true, then it would mean that $x$ would have shared a factor with either $m$ or $n$ so either $\gcd(x, m) \neq 1$ or $\gcd(x, n) \neq 1$. Thus, becuase this fact is true, then this means that every unique $x$ we found by selecting $(a, b)$ not only corresponds to a unique $x$, but also an $x$ which is coprime to $mn$ and therefore in $\phi(mn)$. Since $a$ and $b$ can be chosen independently of each other, this means that for every value of $a$ we choose there are $\phi(n)$ ways of choosing $b$. Thus, there are $\phi(m)\phi(n)$ total ways of choosing $(a, b)$.
 
-      We also need to prove that this list is complete. That is, there doesn't exist an integer $k \in \phi(mn)$ such that it does not appear in $\phi(m)$ or $\phi(n)$. If this is true, then this means that $\gcd(k, m)$ or $\gcd(k, n)$ is not equal to 1, and if this is true then $k$ cannot be coprime to $n$. 
+      We also need to prove that this list is complete. That is, there doesn't exist an integer $k \in \phi(mn)$ such that it does not appear in $\phi(m)$ or $\phi(n)$. If this is true, then this means that $\gcd(k, m)$ or $\gcd(k, n)$ is not equal to 1, and if this is true then $k$ cannot be coprime to $n$. $\blacksquare$
 
       % And from the notes, we know that if $\gcd(a, m) = 1$ and $\gcd(b, m) = 1$ then $x$ is also coprime to $mn$.
     \end{solution}
@@ -272,7 +274,6 @@ Without using induction, prove that $\forall n \in \mathbb{N}$, $n^7-n$ is divis
     Since these expressions are the same we are done. $\blacksquare$
   \end{solution}
 
-
   \end{Parts}
 
 
@@ -299,27 +300,41 @@ integers less than or equal to $n$ which are coprime to $n$ (including 1).
   \begin{solution}
     In order to prove that $f$ is a bijection, that is it both injective and surjective. In other words, there is a one-to-one correspondence and that each element in the original set has a corresponding value in the imaged set.
 
-    Suppose for the sake of contradiction that the function is not surjective. That is, there exist two elements in the original set that map to the same element in the image. Mathematically, this means that there exists $m_1, m_2$ such that 
+    Suppose for the sake of contradiction that the function is not injective. That is, there exist two elements in the original set that map to the same element in the image. Mathematically, this means that there exists $m_1, m_2$ such that 
 
     \[ am_1 \equiv am_2 \pmod n\]
     
-    Since $a$ is coprime to $n$, we can divide both sides by $a$ and we get
+    Since $a$ is coprime to $n$, we can multiply both sides with its multiplicative inverse (which is the same thing as ``dividing'' by $a$) to get:
     
     \[ m_1 \equiv m_2 \pmod n\]
 
-    But this is impossible, since $m_1, m_2$ are both distinct numbers coprime to $n$. Thus, $f$ must be surjective. 
+    But this is impossible, since $m_1, m_2$ are both distinct numbers coprime to $n$. Thus we've reacehd a contradiction, so $f$ must be surjective. 
 
-    Now to prove that $f$ is injective, we choose an element $m_i$ in the set, and prove that we can always find another element $m_j$ within this set which under $f$ maps to $m_i$. Mathematically, this means 
+    Now to prove that $f$ is surjective, we choose an element $m_i$ in the set, and prove that we can always find another element $m_j$ within this set which under $f$ maps to $m_i$. Mathematically, this means 
     \[ ax \equiv m_i \pmod n\]
     
     In order for this to be true, then $x = a^{-1}m_i$. Since $a$ is coprime to $n$, then $a^{-1}$ is also coprime to $n$. Further, the product of two numbers coprime to $n$ must also be coprime to $n$. Thus, $x$ is coprime to $n$. If $x$ is larger than $n$, we can subtract $x$ by $n$ as many times as we like until $x$ is less than $n$ without altering its coprimality. Thus, if $x$ is now less than $n$, it must be contained in $\{m_1, \dots, m_n\}$, since this is the set of numbers coprime to $n$. Thus, there always exists an $x$, so $f$ must be injective.
 
-    Since we've proved both injectivity and surjectivity for $f$, $f$ is a bijection on this set.
+    Since we've proved both injectivity and surjectivity for $f$, $f$ is a bijection on this set, and we are done. $\blacksquare$
   \end{solution}
 
   \Part Prove Euler's Theorem. (Hint: Recall the FLT proof.)
 
   \begin{solution}
+    We follow in a similar fashion to the FLT proof. Consider the set $S$ to be the numbers coprime to $n$: $S = \{m_1, m_2, \dots, m_{\phi(n)}\}$. Now consider $S' = aS = \{am_1, \dots, am_{\phi(n)}\}$ for some $a$ coprime to $n$. From part (a) we've shown that when this set is taken modulo $n$ it is a permutation of $S$, and so $S'$ contains the same elements as $S$, just in a different order. Since they contain the same elements, the product of elements in $S$ and $S'$ must be the same, so we set them equal to each other: 
+
+    \[ m_1m_2\cdots m_{\phi(n)} \equiv am_1am_2\cdots am_{\phi(n)} \pmod{n}\]
+
+    There are $\phi(n)$ numbers on the right hand side, so we can rewrite the equation as
+    
+    \[ m_1m_2\cdots m_{\phi(n)} \equiv a^{\phi(n)}m_1m_2\cdots m_{\phi(n)} \pmod{n}\]
+    
+    Since each of $m_1, m_2, \dots, m_{\phi(n)}$ are coprime to $n$, we can multiply both sides by the multiplicative inverse of each $m_i$ to get:
+
+    \[ 1 \equiv a^{\phi(n)} \pmod{n}\]
+    
+    Which is precisely what we wanted to prove. $\blacksquare$
+
     
   \end{solution}
 
