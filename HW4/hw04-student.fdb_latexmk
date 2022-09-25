@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1664059791 "c:/Users/demmm/OneDrive/Documents/ucberkeley/CS-70/HW4/hw04-student.tex" "hw04-student.pdf" "hw04-student" 1664059795
+["pdflatex"] 1664097429 "c:/Users/demmm/OneDrive/Documents/ucberkeley/CS-70/HW4/hw04-student.tex" "hw04-student.pdf" "hw04-student" 1664097433
   "C:/Users/demmm/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1620702445 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/demmm/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1662951956 13471358 7745db0da6e8c2506d829efca591f648 ""
   "C:/Users/demmm/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1662689528 82507 a9eef8696c92627b87e9975edea03b2a ""
@@ -252,11 +252,11 @@
   "C:/Users/demmm/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.sty" 1253169183 1380 971a51b00a14503ddf754cab24c3f209 ""
   "C:/Users/demmm/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/demmm/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "c:/Users/demmm/OneDrive/Documents/ucberkeley/CS-70/HW4/hw04-student.tex" 1664059790 23401 c93f23992144b3e494d9a0477a939d12 ""
+  "c:/Users/demmm/OneDrive/Documents/ucberkeley/CS-70/HW4/hw04-student.tex" 1664097428 23401 c93f23992144b3e494d9a0477a939d12 ""
   "header.sty" 1663644543 10434 2d2c2a994aa2fdb308bb01aa9b5fd053 ""
-  "hw04-student.aux" 1664059795 1383 cbdc6e8b0ecbeae31524b666f236b577 "pdflatex"
-  "hw04-student.out" 1664059795 1077 cafc8538d1b19b8ef33fe2fad17c05a7 "pdflatex"
-  "hw04-student.tex" 1664059790 23401 c93f23992144b3e494d9a0477a939d12 ""
+  "hw04-student.aux" 1664097433 1383 cbdc6e8b0ecbeae31524b666f236b577 "pdflatex"
+  "hw04-student.out" 1664097433 1077 cafc8538d1b19b8ef33fe2fad17c05a7 "pdflatex"
+  "hw04-student.tex" 1664097428 23401 c93f23992144b3e494d9a0477a939d12 ""
   (generated)
   "hw04-student.aux"
   "hw04-student.log"
