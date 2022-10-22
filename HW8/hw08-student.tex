@@ -252,7 +252,11 @@ For the following experiments,
 
     \begin{solution}
       \begin{enumerate}[i.]
-        \item The sample space is the set of pairs $(a, b) | a, b \in \{0, 1, \dots, q-1\}$. Since $a$ and $b$ can be chosen independently 
+        \item The sample space is the set of pairs $(a, b) | a, b \in \{0, 1, \dots, q-1\}$. 
+        \item Since the sample space is $\{0, 1, \dots, q-1\}$, and since $(a, b)$ can be chosen independently of each other, then we know that $|\Omega| = q^2$, since there are $q$ numbers to choose from.
+        \item The probability of its product being zero is if one of either $a$ or $b$ is zero, then the other is any arbitrary number. Suppose $a = 0$. Then, there are $q$ numbers available for $b$. The same argument goes for $b = 0$. Therefore, there are a total of $2q$ pairings which produce a product of zero. Therefore, we have: 
+        \[ \mathbb P[E_1] = \frac{2q}{q^2} = \frac{2}{q}\]
+        \item 
       \end{enumerate}
     \end{solution}
 
