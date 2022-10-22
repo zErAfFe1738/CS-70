@@ -13,6 +13,7 @@
 
 \section*{Sundry}
 Before you start writing your final homework submission, state briefly how you worked on it.  Who else did you work with?  List names and email addresses.  (In case of homework party, you can just describe the group.)
+
 {\color{blue}{I did not work with anybody to complete this homework.}}
 \vspace{15pt}
 
@@ -49,7 +50,7 @@ For each of the following collections, determine and briefly explain whether it 
 \Part The set of finite-length strings drawn from a countably infinite alphabet, $\mathcal{C}$.
 
 \begin{solution}
-  Just like the previous part, becuase the strings have finite length, then this set of strings is also countably infinite.
+  Because the strings are of finite length, then for a given finite alphabet, there are a finite number of ways to enumerate such a list. Then, for every letter within the finite string, we can pull from another list
 \end{solution}
 
 \Part The set of infinite-length strings over the English alphabet.
@@ -90,14 +91,42 @@ For each of the following collections, determine and briefly explain whether it 
     Is the set containing all increasing functions $f : \N \rightarrow \N$ (i.e., if $x \geq y $, then $f(x) \geq f(y)$) countable or uncountable? Prove your answer.
 
     \begin{solution}
-      This set is uncountable. 
+      Let's enumerate all the functions in the following manner: 
+
+      \begin{center}
+        \begin{tabular}{c|c}
+          $\mathbb N$ & $f: \mathbb N \to \mathbb N$    \\ \hline
+          1                          & $f_1(1), f_1(2), f_1(3), \dots$ \\
+          2                          & $f_2(1), f_2(2), f_2(3), \dots$ \\
+          3                          & $f_3(1), f_3(2), f_3(3), \dots$ \\
+          $\vdots$                   & $\vdots$                       
+          \end{tabular}
+      \end{center}
+
+      with the restriction that $f_k(n) \le f_k(n+1)$ for all $k$ and $n$. Now, we can create a new function $g(x)$ as follows: 
+
+      \begin{align*}
+        g(1) &= f_1(1) + f_2(1) + f_3(1) + \cdots \\
+        g(2) &= f_1(2) + f_2(2) + f_3(2) + \cdots\\
+        \vdots
+      \end{align*}
+
+      Since for every function $f$ we know that $f_k(n) \le f_k(n+1)$, then we also know that $g$ is strictly increasing. However, now we've created a new function which is different from every $f$ in at least one location, since every input of $g(n)$ is created as a sum of all $f(n)$. Therefore, this set is uncountable.
     \end{solution}
     
     \Part
     Is the set containing all decreasing functions $f : \N \rightarrow \N$ (i.e., if $x \geq y$, then $f(x) \leq f(y))$ countable or uncountable? Prove your answer.
 
     \begin{solution}
+      Consider an arbitrary function $f: \mathbb N \to \mathbb N$. We know that since it is strictly decreasing, the function either equals zero or remains a constant value as $x \to \infty$. Furthermore, because $f$'s output is in $\mathbb N$, then this means that there are a \textit{finite} number of decreases that $f$ can make before it reaches zero. 
+
+      Now, we can enumerate every $f$ as follows: for every function $f$, let it be represented by a string consisting of its starting value and the inputs where $f$ decreases immediately followed by how much it decreases. For instance, if $f$ produces the sequence: 
+
+      \[ f: f(0) = 5, f(1) = 3, f(2) = 2, f(3) = 1, f(4) = 0, \dots\]
+
+      then we could enumerate $f$ by writing the string ``(5)(1,2)(2,1)(3,1)(4,1)'' (Note the starting value is 5, then (1, 2) denotes that at $f(1)$, $f$ decreases by 2, and so on.)
       
+      I added the parentheses to be visually clear, but we can just write this string as ``512213141'' as well. In any case, this string must be finitely long, since $f$ can only decreases finitely many times before reaching zero. Therefore, this is effectiely the same as choosing a finite string from a countably infinite alphabet, which from problem 1e we know is countable. Therefore, the set of all decreasing functions from $\mathbb N \to \mathbb N$ is countable.
     \end{solution}
 \end{Parts}
 \pagebreak
@@ -185,6 +214,7 @@ We know that the TestHalt is not computable, and that the Halting Problem belong
     
 
 \item Same as part (a), but the sampling is {\bf without} replacement, i.e. after we take a ball out the bucket we {\bf do not} return the ball back to the bucket.
+
 \begin{solution}
   Note that each ball picked up now reduces the number of available balls. Therefore, the probaiblity is 
 

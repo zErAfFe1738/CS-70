@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1666405901 "/Users/eric/Documents/Berkeley/CS-70/HW8/hw08-student.tex" "/Users/eric/Documents/Berkeley/CS-70/HW8/hw08-student.pdf" "hw08-student" 1666405902
-  "/Users/eric/Documents/Berkeley/CS-70/HW8/hw08-student.aux" 1666405902 1388 3707071c4904fda9e923e9689b2deda5 ""
-  "/Users/eric/Documents/Berkeley/CS-70/HW8/hw08-student.tex" 1666405900 14123 67189a5033487e3b1361bf30ef1fd7fd ""
+["pdflatex"] 1666467821 "/Users/eric/Documents/Berkeley/CS-70/HW8/hw08-student.tex" "/Users/eric/Documents/Berkeley/CS-70/HW8/hw08-student.pdf" "hw08-student" 1666467822
+  "/Users/eric/Documents/Berkeley/CS-70/HW8/hw08-student.aux" 1666467822 1389 bd3b44b6875fcf452b6c24ae9387297a ""
+  "/Users/eric/Documents/Berkeley/CS-70/HW8/hw08-student.tex" 1666467820 16671 e688db3706c1441cf026e561895dba1b ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/sourcesanspro/a_emkxm5.enc" 1587936753 3021 665788e9679767ade2a71155215d25e0 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -281,13 +281,13 @@
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1627101606 2724740 f36a3f5cfec5c6df7b7d2dd3a8cb54e4 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
   "header.sty" 1665980313 10136 deca628b37583ce521e1e1c1a54e1f98 ""
-  "hw08-student.aux" 1666405902 1388 3707071c4904fda9e923e9689b2deda5 "pdflatex"
-  "hw08-student.out" 1666405902 882 63752beca0a6a1d1c48321ea3bbddc7c "pdflatex"
-  "hw08-student.tex" 1666405900 14123 67189a5033487e3b1361bf30ef1fd7fd ""
+  "hw08-student.aux" 1666467822 1389 bd3b44b6875fcf452b6c24ae9387297a "pdflatex"
+  "hw08-student.out" 1666467822 882 63752beca0a6a1d1c48321ea3bbddc7c "pdflatex"
+  "hw08-student.tex" 1666467820 16671 e688db3706c1441cf026e561895dba1b ""
   (generated)
+  "/Users/eric/Documents/Berkeley/CS-70/HW8/hw08-student.pdf"
+  "hw08-student.out"
+  "hw08-student.aux"
   "/Users/eric/Documents/Berkeley/CS-70/HW8/hw08-student.log"
   "hw08-student.pdf"
-  "/Users/eric/Documents/Berkeley/CS-70/HW8/hw08-student.pdf"
-  "hw08-student.aux"
   "hw08-student.log"
-  "hw08-student.out"
