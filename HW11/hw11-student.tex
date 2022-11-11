@@ -1,0 +1,130 @@
+\documentclass[11pt]{article}
+\usepackage{header}
+\def\title{HW 11}
+
+\begin{document}
+\maketitle
+\fontsize{12}{15}\selectfont
+
+\begin{center}
+    Due: Saturday, 11/12, 4:00 PM \\
+    Grace period until Saturday, 11/12, 6:00 PM \\
+\end{center}
+
+\section*{Sundry}
+Before you start writing your final homework submission, state briefly how you worked on it.  Who else did you work with?  List names and email addresses.  (In case of homework party, you can just describe the group.)
+
+\vspace{15pt}
+
+\Question{Balls and Bins}
+
+Throw $n$ balls into $m$ bins, where $m$ and $n$ are positive integers. Let $X$ be the number of bins with exactly one ball. Compute $\var (X)$. Your final answer should not contain any summations.
+
+\Question{Will I Get My Package?}
+
+A delivery guy in some company is out delivering $n$ packages to $n$ customers, where $n$ is a natural number greater than 1.
+Not only does he hand each customer a package uniformly at random from the remaining packages, he opens the package before delivering it with probability $1/2$.
+Let $X$ be the number of customers who receive their own packages unopened. 
+
+\begin{Parts}
+
+\Part Compute the expectation $\E[X]$.
+
+\Part Compute the variance $\var(X)$.
+
+\end{Parts}
+
+\Question{Double-Check Your Intuition Again}
+
+\begin{Parts}
+	\Part You roll a fair six-sided die and record the result $X$. You roll the die again and record the result $Y$. 
+	
+	\begin{enumerate}[(i)]
+		\item What is $\cov (X+Y, X-Y)$? 
+		\item Prove that $X+Y$ and $X-Y$ are not independent.
+	\end{enumerate}
+
+	
+	For each of the problems below, if you think the answer is "yes" then provide a proof. If you think the answer is "no", then provide a counterexample.
+	
+	\Part If $X$ is a random variable and $\var (X) = 0$, then must $X$ be a constant?
+	
+
+	\Part If $X$ is a random variable and $c$ is a constant, then is $\var (cX) = c \var (X)$?
+	
+
+	\Part If $A$ and $B$ are random variables with nonzero standard deviations and $\text{Corr} (A, B) = 0$, then are $A$ and $B$ independent?
+	
+
+	\Part If $X$ and $Y$ are not necessarily independent random variables, but $\text{Corr} (X, Y) = 0$, and $X$ and $Y$ have nonzero standard deviations, then is $\var (X+Y) = \var(X) + \var(Y)$?
+	
+
+	\Part If $X$ and $Y$ are random variables then is $\E[\max (X, Y) \min (X, Y)] = \E[X Y]$?
+	
+
+	\Part If $X$ and $Y$ are independent random variables with nonzero standard deviations, then is $$\text{Corr} (\max (X, Y), \min (X, Y)) = \text{Corr} (X, Y) ?$$
+	
+\end{Parts}
+
+\Question{Fishy Computations}
+
+Assume for each part that the random variable can be modelled by a Poisson distribution.
+
+\begin{Parts}
+	\Part Suppose that on average, a fisherman catches $20$ salmon per week. What is the probability that he will catch exactly $7$ salmon this week?
+    
+	
+	\Part Suppose that on average, you go to Fisherman's Wharf twice a year. What is the probability that you will go at most once in 2018?
+    
+
+	\Part Suppose that in March, on average, there are $5.7$ boats that sail in Laguna Beach per day. What is the probability there will be \textit{at least} $3$ boats sailing throughout the \textit{next two days} in Laguna?
+    
+	
+\end{Parts}
+
+\Question{Geometric and Poisson}
+
+Let $X\sim \text{Geo}(p)$ and $Y\sim \text{Poisson}(\lambda)$ be independent. random variables. Compute $\Pr[X>Y]$. Your final answer should not have summations.
+
+Hint: Use the total probability rule.
+
+\Question{Poisson Coupling}
+
+\begin{Parts}
+    \Part Let $X$, $Y$ be discrete random variables taking values in $\N$.
+    A common way to measure the ``distance'' between two probability distributions is known as the total variation norm, and it is given by
+    \begin{align*}
+        d(X, Y) &= \frac{1}{2} \sum_{k=0}^\infty |\Pr[X = k] - \Pr[Y = k]|.
+    \end{align*}
+    Show that
+    \begin{align} \label{eq:metric-bound}
+        d(X, Y) \leq \Pr[X \neq Y].
+    \end{align}
+    [\textit{Hint}: Use the Law of Total Probability to split up the events according to $\{X = Y\}$ and $\{X \neq Y\}$. Also, the inequality $|a - b| \leq a + b$ might be helpful.]
+    \Part Show that if $X_i, Y_i$, $i \in \Z_+$ are discrete random variables taking values in $\N$, then $\Pr[\sum_{i=1}^n X_i \neq \sum_{i=1}^n Y_i] \leq \sum_{i=1}^n \Pr[X_i \neq Y_i]$.
+    [\textit{Hint}: Maybe try the Union Bound.]
+\end{Parts}
+
+Notice that the LHS of (\ref{eq:metric-bound}) only depends on the \textit{marginal} distributions of $X$ and $Y$, whereas the RHS depends on the \textit{joint} distribution of $X$ and $Y$.
+This leads us to the idea that we can find a good bound for $d(X, Y)$ by choosing a special joint distribution for $(X, Y)$ which makes $\Pr[X \ne Y]$ small.
+
+We will now introduce a coupling argument which shows that the distribution of the sum of independent Bernoulli random variables with parameters $p_i$, $i = 1, \dotsc, n$, is close to a Poisson distribution with parameter $\lambda = p_1 + \cdots + p_n$.
+
+\begin{Parts}
+    \setcounter{enumi}{2}
+    \Part Let $(X_i, Y_i)$ and $(X_i, Y_j)$ be independent for $i \ne j$, but for each $i$, $X_i$ and $Y_i$ are \textit{coupled}, meaning that they have the following discrete distribution:
+    \begin{align*}
+        \Pr[X_i=0, Y_i=0] &= 1-p_i, & \\
+        \Pr[X_i=1, Y_i=y] &= \frac{e^{-p_i} p_i^y}{y!}, &\qquad y = 1, 2, \dotsc, \\
+        \Pr[X_i=1, Y_i=0] &= e^{-p_i} - (1-p_i), & \\
+        \Pr[X_i=x, Y_i=y] &= 0, & \qquad \text{otherwise}.
+    \end{align*}
+    Recall that all valid distributions satisfy two important properties.
+    Argue that this distribution is a valid joint distribution.
+    \Part Show that $X_i$ has the Bernoulli distribution with probability $p_i$.
+    \Part Show that $Y_i$ has the Poisson distribution with parameter $\lambda = p_i$.
+    \Part Show that $\Pr[X_i \neq Y_i] \leq p_i^2$.
+    \Part Finally, show that $d(\sum_{i=1}^n X_i, \sum_{i=1}^n Y_i) \leq \sum_{i=1}^n p_i^2$.
+\end{Parts}
+
+\end{document}
