@@ -20,6 +20,21 @@ Before you start writing your final homework submission, state briefly how you w
 
 Throw $n$ balls into $m$ bins, where $m$ and $n$ are positive integers. Let $X$ be the number of bins with exactly one ball. Compute $\var (X)$. Your final answer should not contain any summations.
 
+
+\begin{solution}
+    Let $I_i$ be the indicator variable for the event that bin $i$ has 1 ball. Now, we use:
+
+    \[ E\left(\sum I_i\right) = \sum P(I_i)\]
+
+    to calculate the expected value. Computing the probability of any indicator variable $I_i$:
+
+    \[ P(I_i) = \frac{1}{m} \left(\frac{m-1}{m}\right)^{n-1} n\]
+
+    We multiply by $n$ at the end because there are $n$ balls that we could choose from to go into bin $i$. Now, there are $m$ bins, so therefore the total expected value is simply $mP(I_i)$, so therefore: 
+
+    \[ \sum P(I_i) = n \left(\frac{m-1}{m}\right)^{n-1}\]
+\end{solution}
+\pagebreak
 \Question{Will I Get My Package?}
 
 A delivery guy in some company is out delivering $n$ packages to $n$ customers, where $n$ is a natural number greater than 1.
@@ -33,7 +48,7 @@ Let $X$ be the number of customers who receive their own packages unopened.
 \Part Compute the variance $\var(X)$.
 
 \end{Parts}
-
+\pagebreak
 \Question{Double-Check Your Intuition Again}
 
 \begin{Parts}
@@ -65,7 +80,7 @@ Let $X$ be the number of customers who receive their own packages unopened.
 	\Part If $X$ and $Y$ are independent random variables with nonzero standard deviations, then is $$\text{Corr} (\max (X, Y), \min (X, Y)) = \text{Corr} (X, Y) ?$$
 	
 \end{Parts}
-
+\pagebreak
 \Question{Fishy Computations}
 
 Assume for each part that the random variable can be modelled by a Poisson distribution.
@@ -81,13 +96,13 @@ Assume for each part that the random variable can be modelled by a Poisson distr
     
 	
 \end{Parts}
-
+\pagebreak
 \Question{Geometric and Poisson}
 
 Let $X\sim \text{Geo}(p)$ and $Y\sim \text{Poisson}(\lambda)$ be independent. random variables. Compute $\Pr[X>Y]$. Your final answer should not have summations.
 
 Hint: Use the total probability rule.
-
+\pagebreak 
 \Question{Poisson Coupling}
 
 \begin{Parts}
